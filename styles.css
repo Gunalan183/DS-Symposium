@@ -102,7 +102,7 @@ header::before {
 .header-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
@@ -112,9 +112,10 @@ header::before {
 
 .college-info {
     text-align: center;
-    flex: 2.2;
+    flex: 3;
     animation: fadeIn 1s ease-out;
-    padding: 0 10px;
+    padding: 0 15px;
+    max-width: 600px;
 }
 
 .college-name {
@@ -141,7 +142,7 @@ header::before {
 }
 
 .logo-left, .logo-right {
-    flex: 0.4;
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -174,16 +175,16 @@ header::before {
 }
 
 .right-logo {
-    max-width: 90px;
+    max-width: 120px;
     height: auto;
     transition: all 0.3s ease;
     margin: 0 5px;
-    transform: scale(1.1) rotate(5deg);
+    transform: scale(1.1);
     filter: brightness(1.1);
 }
 
 .right-logo:hover {
-    transform: scale(1.15) rotate(10deg);
+    transform: scale(1.15);
     filter: brightness(1.2);
 }
 
@@ -734,8 +735,12 @@ footer::before {
         padding: 0 15px;
     }
     
-    .left-logo, .right-logo {
+    .left-logo {
         max-width: 80px;
+    }
+    
+    .right-logo {
+        max-width: 110px;
     }
     
     .chapters-grid {
@@ -769,8 +774,12 @@ footer::before {
         gap: 15px;
     }
     
-    .left-logo, .right-logo {
+    .left-logo {
         max-width: 70px;
+    }
+    
+    .right-logo {
+        max-width: 100px;
     }
     
     .college-name {
@@ -903,8 +912,12 @@ footer::before {
         font-size: 12px;
     }
     
-    .left-logo, .right-logo {
+    .left-logo {
         max-width: 50px;
+    }
+    
+    .right-logo {
+        max-width: 70px;
     }
     
     .countdown-item {
