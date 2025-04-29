@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 3 - DS SYMPOSIA '25</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .coming-soon-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 60vh;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        .coming-soon-title {
+            font-size: 48px;
+            margin-bottom: 20px;
+            background: var(--gradient-primary);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            background-size: 200% 200%;
+            animation: gradientFlow 5s ease infinite;
+        }
+        
+        .coming-soon-message {
+            font-size: 24px;
+            margin-bottom: 30px;
+            max-width: 800px;
+            color: var(--text-secondary);
+        }
+        
+        .countdown-container {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .countdown-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .countdown-value {
+            font-size: 36px;
+            font-weight: bold;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            background: var(--dark-card);
+            color: var(--text-light);
+            box-shadow: 0 5px 15px var(--shadow-color);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .countdown-value::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-primary);
+            opacity: 0.1;
+            z-index: 0;
+        }
+        
+        .countdown-label {
+            margin-top: 10px;
+            font-size: 16px;
+            color: var(--text-secondary);
+        }
+        
+        .back-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: var(--gradient-primary);
+            background-size: 200% 200%;
+            animation: gradientFlow 5s ease infinite;
+            color: var(--text-light);
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            box-shadow: 0 5px 15px var(--shadow-color);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .back-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-secondary);
+            background-size: 200% 200%;
+            animation: gradientFlow 5s ease infinite;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: -1;
+        }
+        
+        .back-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px var(--shadow-color);
+        }
+        
+        .back-btn:hover::before {
+            opacity: 1;
+        }
+        
+        .chapter-info {
+            background-color: var(--dark-card);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 40px;
+            max-width: 800px;
+            box-shadow: 0 5px 15px var(--shadow-color);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .chapter-info::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-primary);
+            opacity: 0.05;
+            z-index: 0;
+        }
+        
+        .chapter-info h3 {
+            color: var(--text-light);
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .chapter-info p {
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .chapter-departments {
+            border-left: 3px solid var(--primary-color);
+            padding-left: 15px;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-left">
+                <!-- Left logo -->
+                <img src="logo's/DSCET NEW LOGO.jpg" alt="DSCET Logo" class="left-logo">
+            </div>
+            
+            <div class="college-info">
+                <h1 class="college-name">Dhanalakshmi Srinivasan</h1>
+                <h2 class="college-subname">College of Engineering and Technology</h2>
+                <p class="college-address">ECR, MAMALLAPURAM. CHENGALPATTU DISTRICT.</p>
+                <p class="college-approvals">Approved by AICTE, NEW DELHI | Affiliated to Anna University, Chennai.</p>
+                <p class="college-accreditation">( Accredited by NAAC with "A+" Grade )</p>
+            </div>
+            
+            <div class="logo-right">
+                <!-- Right logos -->
+                <img src="logo's/DS SYMPOSIA.png" alt="DS SYMPOSIA Logo" class="right-logo">
+                <img src="logo's/student council.png" alt="Student Council Logo" class="right-logo">
+            </div>
+        </div>
+    </header>
+
+    <section class="symposium-section">
+        <div class="container">
+            <div class="chapter-info">
+                <h3>Chapter 3</h3>
+                <p class="chapter-date">Date: 17/05/2025</p>
+                <p class="chapter-departments">Departments: AIDS, CSE, CYBER, IT</p>
+                <p>Showcase your technical prowess through various competitions and challenges. This chapter provides a platform for students to demonstrate their innovative ideas and solutions.</p>
+            </div>
+            
+            <div class="coming-soon-container">
+                <h2 class="coming-soon-title">Coming Soon</h2>
+                <p class="coming-soon-message">We're preparing an exciting program for Chapter 3. Registration details and event schedule will be available soon. Check back later!</p>
+                
+                <div class="countdown-container">
+                    <div class="countdown-item">
+                        <div class="countdown-value" id="days">17</div>
+                        <div class="countdown-label">Days</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-value" id="hours">24</div>
+                        <div class="countdown-label">Hours</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-value" id="minutes">60</div>
+                        <div class="countdown-label">Minutes</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-value" id="seconds">60</div>
+                        <div class="countdown-label">Seconds</div>
+                    </div>
+                </div>
+                
+                <a href="index.html" class="back-btn">Back to Home</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section contact-info">
+                <h4>Contact Us</h4>
+                <p><i class="fas fa-phone"></i> +91 1234567890</p>
+                <p><i class="fas fa-globe"></i> <a href="https://dscet.ac.in/" target="_blank">dscet.ac.in</a></p>
+                <p><i class="fas fa-map-marker-alt"></i> ECR, MAMALLAPURAM. CHENGALPATTU DISTRICT</p>
+            </div>
+            
+            <div class="footer-section social-media">
+                <h4>Connect With Us</h4>
+                <div class="social-icons">
+                    <a href="#" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-icon" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-icon" title="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-icon" title="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section map">
+                <h4>Find Us</h4>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2753.0724798661895!2d80.17936913724903!3d12.619611499223469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a53ab5250243c71%3A0xbb338ff75412f3f5!2sDhanalakshmi%20Srinivasan%20College%20of%20Engineering%20and%20Technology!5e0!3m2!1sen!2sin!4v1745908728207!5m2!1sen!2sin" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2025 DS SYMPOSIA - Dhanalakshmi Srinivasan College of Engineering and Technology</p>
+        </div>
+    </footer>
+
+    <script>
+        // Countdown Timer
+        const countdownDate = new Date("May 17, 2025 09:00:00").getTime();
+        
+        const countdown = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+            
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            document.getElementById("days").innerHTML = days;
+            document.getElementById("hours").innerHTML = hours;
+            document.getElementById("minutes").innerHTML = minutes;
+            document.getElementById("seconds").innerHTML = seconds;
+            
+            if (distance < 0) {
+                clearInterval(countdown);
+                document.getElementById("days").innerHTML = "0";
+                document.getElementById("hours").innerHTML = "0";
+                document.getElementById("minutes").innerHTML = "0";
+                document.getElementById("seconds").innerHTML = "0";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

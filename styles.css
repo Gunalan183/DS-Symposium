@@ -112,8 +112,9 @@ header::before {
 
 .college-info {
     text-align: center;
-    flex: 2;
+    flex: 2.2;
     animation: fadeIn 1s ease-out;
+    padding: 0 10px;
 }
 
 .college-name {
@@ -140,18 +141,50 @@ header::before {
 }
 
 .logo-left, .logo-right {
-    flex: 0.5;
+    flex: 0.4;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .logo-left {
     animation: slideInLeft 1s ease-out;
 }
 
+.left-logo {
+    max-width: 120px;
+    height: auto;
+    transition: all 0.3s ease;
+    border: 2px solid var(--secondary-color);
+    box-shadow: 0 0 10px var(--secondary-color);
+    transform: scale(1.05);
+}
+
+.left-logo:hover {
+    transform: scale(1.1);
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 0 15px var(--primary-color);
+}
+
 .logo-right {
     animation: slideInRight 1s ease-out;
+    flex-direction: row;
+}
+
+.right-logo {
+    max-width: 90px;
+    height: auto;
+    transition: all 0.3s ease;
+    margin: 0 5px;
+    transform: scale(1.1) rotate(5deg);
+    filter: brightness(1.1);
+}
+
+.right-logo:hover {
+    transform: scale(1.15) rotate(10deg);
+    filter: brightness(1.2);
 }
 
 .logo-placeholder {
@@ -701,9 +734,8 @@ footer::before {
         padding: 0 15px;
     }
     
-    .logo-placeholder {
-        width: 80px;
-        height: 80px;
+    .left-logo, .right-logo {
+        max-width: 80px;
     }
     
     .chapters-grid {
@@ -733,6 +765,12 @@ footer::before {
     
     .logo-left, .logo-right {
         margin-bottom: 15px;
+        flex-direction: row;
+        gap: 15px;
+    }
+    
+    .left-logo, .right-logo {
+        max-width: 70px;
     }
     
     .college-name {
@@ -797,10 +835,8 @@ footer::before {
         font-size: 14px;
     }
     
-    .logo-placeholder {
-        width: 60px;
-        height: 60px;
-        font-size: 12px;
+    .left-logo, .right-logo {
+        max-width: 60px;
     }
     
     .section-title {
@@ -867,9 +903,8 @@ footer::before {
         font-size: 12px;
     }
     
-    .logo-placeholder {
-        width: 50px;
-        height: 50px;
+    .left-logo, .right-logo {
+        max-width: 50px;
     }
     
     .countdown-item {
@@ -892,9 +927,8 @@ footer::before {
         padding: 10px 20px;
     }
     
-    .logo-placeholder {
-        width: 60px;
-        height: 60px;
+    .left-logo, .right-logo {
+        max-width: 60px;
     }
     
     .symposium-section, .chapters-section {
