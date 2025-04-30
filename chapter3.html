@@ -5,228 +5,189 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chapter 3 - DS SYMPOSIA '25</title>
     <link rel="icon" type="image/png" href="logo's/DS SYMPOSIA.png">
-    <link rel="stylesheet" href="styles.css">
-    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        .coming-soon-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 60vh;
-            text-align: center;
-            padding: 40px 20px;
-        }
-        
-        .coming-soon-title {
-            font-size: 48px;
-            margin-bottom: 20px;
-            background: var(--gradient-primary);
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-            background-size: 200% 200%;
-            animation: gradientFlow 5s ease infinite;
-        }
-        
-        .coming-soon-message {
-            font-size: 24px;
-            margin-bottom: 30px;
-            max-width: 800px;
-            color: var(--text-secondary);
-        }
-        
-        .countdown-container {
-            display: flex;
-            gap: 20px;
-            margin-bottom: 40px;
-        }
-        
-        .countdown-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        
-        .countdown-value {
-            font-size: 36px;
-            font-weight: bold;
-            width: 100px;
-            height: 100px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 12px;
-            background: var(--dark-card);
-            color: var(--text-light);
-            box-shadow: 0 5px 15px var(--shadow-color);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .countdown-value::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: var(--gradient-primary);
-            opacity: 0.1;
-            z-index: 0;
-        }
-        
-        .countdown-label {
-            margin-top: 10px;
-            font-size: 16px;
-            color: var(--text-secondary);
-        }
-        
-        .back-btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background: var(--gradient-primary);
-            background-size: 200% 200%;
-            animation: gradientFlow 5s ease infinite;
-            color: var(--text-light);
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: 600;
-            letter-spacing: 1px;
-            box-shadow: 0 5px 15px var(--shadow-color);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-        }
-        
-        .back-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: var(--gradient-secondary);
-            background-size: 200% 200%;
-            animation: gradientFlow 5s ease infinite;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            z-index: -1;
-        }
-        
-        .back-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px var(--shadow-color);
-        }
-        
-        .back-btn:hover::before {
-            opacity: 1;
-        }
-        
-        .chapter-info {
-            background-color: var(--dark-card);
-            border-radius: 12px;
-            padding: 30px;
-            margin-bottom: 40px;
-            max-width: 800px;
-            box-shadow: 0 5px 15px var(--shadow-color);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .chapter-info::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: var(--gradient-primary);
-            opacity: 0.05;
-            z-index: 0;
-        }
-        
-        .chapter-info h3 {
-            color: var(--text-light);
-            margin-bottom: 15px;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .chapter-info p {
-            color: var(--text-secondary);
-            margin-bottom: 10px;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .chapter-departments {
-            border-left: 3px solid var(--primary-color);
-            padding-left: 15px;
-            margin-bottom: 20px;
-            line-height: 1.4;
-        }
-    </style>
+    <link rel="stylesheet" href="./chapter.css">
 </head>
 <body>
     <header>
         <div class="header-container">
             <div class="logo-left">
-                <!-- Left logo -->
-                <img src="logo's/DSCET NEW LOGO.jpg" alt="DSCET Logo" class="left-logo">
+                <img src="./logo's/DSCET-LOGO-768x623-removebg-preview (2) (1).png" alt="DSCET Logo">
             </div>
             
             <div class="college-info">
                 <h1 class="college-name">Dhanalakshmi Srinivasan</h1>
-                <h2 class="college-subname">College of Engineering and Technology</h2>
+                <h2 class="college-subname">College of Engineering & Technology</h2>
                 <p class="college-address">ECR, MAMALLAPURAM. CHENGALPATTU DISTRICT.</p>
                 <p class="college-approvals">Approved by AICTE, NEW DELHI | Affiliated to Anna University, Chennai.</p>
                 <p class="college-accreditation">( Accredited by NAAC with "A+" Grade )</p>
             </div>
             
             <div class="logo-right">
-                <!-- Right logos -->
                 <img src="logo's/DS SYMPOSIA.png" alt="DS SYMPOSIA Logo" class="right-logo">
-                <img src="logo's/student council.png" alt="Student Council Logo" class="right-logo">
             </div>
         </div>
     </header>
+    
+    <div class="chapter-title-container" style="text-align: center; padding: 20px 0; background-color: var(--dark-surface);">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <div class="chapter-badge" style="display: inline-block; background: var(--gradient-primary); padding: 5px 15px; border-radius: 20px; font-weight: bold; margin-bottom: 10px;">Chapter 3</div>
+            <h2 class="chapter-main-title" style="font-size: 28px; margin-bottom: 10px;">DS SYMPOSIA '25</h2>
+            <p class="chapter-date-display" style="color: var(--text-secondary);"><i class="fas fa-calendar-alt"></i> May 17, 2025</p>
+        </div>
+    </div>
 
-    <section class="symposium-section">
+    <section class="chapter-description-section">
         <div class="container">
-            <div class="chapter-info">
-                <h3>Chapter 3</h3>
-                <p class="chapter-date">Date: 17/05/2025</p>
-                <p class="chapter-departments">Departments: AIDS, CSE, CYBER, IT</p>
-                <p>Showcase your technical prowess through various competitions and challenges. This chapter provides a platform for students to demonstrate their innovative ideas and solutions.</p>
+            <div class="chapter-description">
+                <h3>About Chapter 3</h3>
+                <p>Welcome to Chapter 3 of DS SYMPOSIA '25, featuring Artificial Intelligence and Data Science (AIDS), Computer Science Engineering (CSE), Cyber Security (CYBER), and Information Technology (IT) departments. This chapter brings together innovative minds, technical experts, and enthusiastic students to showcase their talents and exchange knowledge in these specialized domains.</p>
+                <p>Chapter 3 explores the cutting-edge technologies and digital innovations shaping our future. This segment focuses on theoretical concepts and their practical implementations across artificial intelligence, computer science, cybersecurity, and information technology fields.</p>
+                <!-- <p>Join us for an exciting journey of learning, innovation, and networking with industry professionals and academic experts. Participate in workshops, technical presentations, and competitions designed to enhance your skills and knowledge.</p> -->
             </div>
-            
-            <div class="coming-soon-container">
-                <h2 class="coming-soon-title">Coming Soon</h2>
-                <p class="coming-soon-message">We're preparing an exciting program for Chapter 3. Registration details and event schedule will be available soon. Check back later!</p>
-                
-                <div class="countdown-container">
-                    <div class="countdown-item">
-                        <div class="countdown-value" id="days">17</div>
-                        <div class="countdown-label">Days</div>
+        </div>
+    </section>
+
+    <section class="departments-section" id="info">
+        <div class="container">
+            <h3 class="section-title">Participating Departments</h3>
+            <div class="departments-grid">
+                <!-- AIDS Department -->
+                <div class="department-card">
+                    <div class="department-header">
+                        <h4>Artificial Intelligence and Data Science</h4>
+                        <div class="department-logo">
+                            <img src="dept logo's/AIDS LOGO.jpg" alt="AIDS Logo" class="dept-logo-img">
+                        </div>
                     </div>
-                    <div class="countdown-item">
-                        <div class="countdown-value" id="hours">24</div>
-                        <div class="countdown-label">Hours</div>
-                    </div>
-                    <div class="countdown-item">
-                        <div class="countdown-value" id="minutes">60</div>
-                        <div class="countdown-label">Minutes</div>
-                    </div>
-                    <div class="countdown-item">
-                        <div class="countdown-value" id="seconds">60</div>
-                        <div class="countdown-label">Seconds</div>
+                    <div class="department-content">
+                        <h5 class="event-heading">Technical Events</h5>
+                        <ul class="event-list">
+                            <li><i class="fas fa-check-circle"></i> Paper Presentation</li>
+                            <li><i class="fas fa-check-circle"></i> Error Quest(debugging)</li>
+                            <li><i class="fas fa-check-circle"></i> Brain Bytes(Quiz)</li>
+                            <li><i class="fas fa-check-circle"></i> AI Art Battle(AI image generation)</li>
+                            <li><i class="fas fa-check-circle"></i> Frontend Frenzy(Web development)</li>
+                        </ul>
+                        
+                        <h5 class="event-heading">Non-Technical Events</h5>
+                        <ul class="event-list">
+                            <li><i class="fas fa-check-circle"></i> Connection</li>
+                            <li><i class="fas fa-check-circle"></i> IPL Action</li>
+                            <li><i class="fas fa-check-circle"></i> Shout Karo</li>
+                            <li><i class="fas fa-check-circle"></i> Freefire/BGMI</li>
+                            <li><i class="fas fa-check-circle"></i> Minute to win it</li>
+                        </ul>
+                        <div class="department-buttons">
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdFj4gTlOudgtf_eCGb07EAFfLwwOMiTQnEjEYsXlvXdZP1ww/viewform?usp=header " class="btn">Register Now</a>
+                            <a href="./event details/AIGNITION'25 GUIDLINES (AIDS).pdf" class="btn btn-outline">Event Details</a>
+                        </div>
                     </div>
                 </div>
-                
-                <a href="index.html" class="back-btn">Back to Home</a>
+
+                <!-- CSE Department -->
+                <div class="department-card">
+                    <div class="department-header">
+                        <h4>Computer Science Engineering</h4>
+                        <div class="department-logo">
+                            <img src="dept logo's/CSE LOGO.jpg" alt="CSE Logo" class="dept-logo-img">
+                        </div>
+                    </div>
+                    <div class="department-content">
+                        <h5 class="event-heading">Technical Events</h5>
+                        <ul class="event-list">
+                            <li><i class="fas fa-check-circle"></i> Paper Presentation</li>
+                            <li><i class="fas fa-check-circle"></i> Coding Contest</li>
+                            <li><i class="fas fa-check-circle"></i> Web Development</li>
+                        </ul>
+                        
+                        <h5 class="event-heading">Non-Technical Events</h5>
+                        <ul class="event-list">
+                            <li><i class="fas fa-check-circle"></i> Technical Quiz</li>
+                            <li><i class="fas fa-check-circle"></i> Debug Challenge</li>
+                            <li><i class="fas fa-check-circle"></i> Gaming Tournament</li>
+                        </ul>
+                        <div class="department-buttons">
+                            <a href="https://forms.gle/awzxu8gb6pWftGAw6" class="btn">Register Now</a>
+                            <a href="#" class="btn btn-outline">Event Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CYBER Department -->
+                <div class="department-card">
+                    <div class="department-header">
+                        <h4>Cyber Security</h4>
+                        <div class="department-logo">
+                            <img src="dept logo's/CYBER LOGO.png" alt="CYBER Logo" class="dept-logo-img">
+                        </div>
+                    </div>
+                    <div class="department-content">
+                        <h5 class="event-heading">Technical Events</h5>
+                        <ul class="event-list">
+                            <li><i class="fas fa-check-circle"></i> Poster</li>
+                            <li><i class="fas fa-check-circle"></i> Coding Event</li>
+                            <li><i class="fas fa-check-circle"></i> Cypherl Decypher</li>
+                            <li><i class="fas fa-check-circle"></i> Idea Pitch</li>
+                            <li><i class="fas fa-check-circle"></i> Paper Preden</li>
+                        </ul>
+                        
+                        <h5 class="event-heading">Non-Technical Events</h5>
+                        <ul class="event-list">
+                            <li><i class="fas fa-check-circle"></i> Survival Showdown</li>
+                            <li><i class="fas fa-check-circle"></i> Mix & Fix</li>
+                            <li><i class="fas fa-check-circle"></i> Real or Ruse</li>
+                            <li><i class="fas fa-check-circle"></i> Logo Design</li>
+                            <li><i class="fas fa-check-circle"></i> Football</li>
+                        </ul>
+                        <div class="department-buttons">
+                            <a href="#" class="btn">Register Now</a>
+                            <a href="#" class="btn btn-outline">Event Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IT Department -->
+                <div class="department-card">
+                    <div class="department-header">
+                        <h4>Information Technology</h4>
+                        <div class="department-logo">
+                            <img src="dept logo's/IT LOGO.jpg" alt="IT Logo" class="dept-logo-img">
+                        </div>
+                    </div>
+                    <div class="department-content">
+                        <h5 class="event-heading">Technical Events</h5>
+                        <ul class="event-list">
+                            <li><i class="fas fa-check-circle"></i> Frontend design</li>
+                            <li><i class="fas fa-check-circle"></i> Paper Presentation</li>
+                            <li><i class="fas fa-check-circle"></i> Cyber Shit</li>
+                            <li><i class="fas fa-check-circle"></i> Debugging</li>
+                        </ul>
+                        
+                        <h5 class="event-heading">Non-Technical Events</h5>
+                        <ul class="event-list">
+                            <li><i class="fas fa-check-circle"></i> Connection</li>
+                            <li><i class="fas fa-check-circle"></i> Free fire</li>
+                            <li><i class="fas fa-check-circle"></i>Memerize the image</li>
+                            <li><i class="fas fa-check-circle"></i>Chess</li>
+                        </ul>
+                        <div class="department-buttons">
+                            <a href="#" class="btn">Register Now</a>
+                            <a href="#" class="btn btn-outline">Event Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h3>Ready to Participate?</h3>
+                <p>Join us on May 17, 2025 for an exciting day of innovation, learning, and networking.</p>
+                <a href="#info" class="btn btn-large">Register for Chapter 3</a>
             </div>
         </div>
     </section>
@@ -235,7 +196,7 @@
         <div class="footer-container">
             <div class="footer-section contact-info">
                 <h4>Contact Us</h4>
-                <p><i class="fas fa-phone"></i> +91 1234567890</p>
+                <p><i class="fas fa-phone"></i> +91 7395948384</p>
                 <p><i class="fas fa-globe"></i> <a href="https://dscet.ac.in/" target="_blank">dscet.ac.in</a></p>
                 <p><i class="fas fa-map-marker-alt"></i> ECR, MAMALLAPURAM. CHENGALPATTU DISTRICT</p>
             </div>
@@ -243,10 +204,10 @@
             <div class="footer-section social-media">
                 <h4>Connect With Us</h4>
                 <div class="social-icons">
-                    <a href="#" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" class="social-icon" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.linkedin.com/company/dhanalakshmi-srinivasan-college-of-engineering-and-technology-autonomous/ " class="social-icon" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.youtube.com/@dscet2877" class="social-icon" title="YouTube"><i class="fab fa-youtube"></i></a>
                     <a href="#" class="social-icon" title="Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="#" class="social-icon" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/dscet.ac.in?igsh=ZGdsemlhdm9lMGI4" class="social-icon" title="Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
             
@@ -263,32 +224,10 @@
         </div>
     </footer>
 
-    <script>
-        // Countdown Timer
-        const countdownDate = new Date("May 17, 2025 09:00:00").getTime();
-        
-        const countdown = setInterval(function() {
-            const now = new Date().getTime();
-            const distance = countdownDate - now;
-            
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            
-            document.getElementById("days").innerHTML = days;
-            document.getElementById("hours").innerHTML = hours;
-            document.getElementById("minutes").innerHTML = minutes;
-            document.getElementById("seconds").innerHTML = seconds;
-            
-            if (distance < 0) {
-                clearInterval(countdown);
-                document.getElementById("days").innerHTML = "0";
-                document.getElementById("hours").innerHTML = "0";
-                document.getElementById("minutes").innerHTML = "0";
-                document.getElementById("seconds").innerHTML = "0";
-            }
-        }, 1000);
-    </script>
+    <div class="back-to-home">
+        <a href="index.html" title="Back to Home"><i class="fas fa-home"></i></a>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

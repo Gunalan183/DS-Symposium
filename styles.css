@@ -44,6 +44,11 @@ body {
     to { opacity: 1; }
 }
 
+@keyframes logoFadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 @keyframes slideInLeft {
     from { transform: translateX(-50px); opacity: 0; }
     to { transform: translateX(0); opacity: 1; }
@@ -102,7 +107,7 @@ header::before {
 .header-container {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
@@ -116,29 +121,7 @@ header::before {
     animation: fadeIn 1s ease-out;
     padding: 0 15px;
     max-width: 600px;
-}
-
-.college-name {
-    font-size: 32px;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-bottom: 0;
-    line-height: 1.2;
-    background: var(--gradient-primary);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    background-size: 200% 200%;
-    animation: gradientFlow 5s ease infinite;
-}
-
-.college-subname {
-    font-size: 20px;
-    font-weight: 600;
-    text-transform: uppercase;
-    margin-top: 0;
-    margin-bottom: 10px;
-    color: var(--text-secondary);
+    margin: 0 auto;
 }
 
 .logo-left, .logo-right {
@@ -148,6 +131,12 @@ header::before {
     align-items: center;
     flex-direction: column;
     gap: 10px;
+}
+
+.logo-left img {
+    max-width: 150px;
+    height: auto;
+    transition: all 0.3s ease;
 }
 
 .logo-left {
@@ -188,24 +177,27 @@ header::before {
     filter: brightness(1.2);
 }
 
-.logo-placeholder {
-    width: 100px;
-    height: 100px;
+.college-name {
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    line-height: 1.2;
     background: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
     background-size: 200% 200%;
     animation: gradientFlow 5s ease infinite;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    color: var(--text-light);
-    box-shadow: 0 5px 15px var(--shadow-color);
-    transition: transform 0.3s ease;
 }
 
-.logo-placeholder:hover {
-    transform: scale(1.1);
+.college-subname {
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--text-secondary);
 }
 
 .college-address, .college-approvals, .college-accreditation {
@@ -217,6 +209,56 @@ header::before {
 .college-accreditation {
     font-weight: 600;
     color: var(--secondary-color);
+}
+
+/* Tablet devices */
+@media (max-width: 768px) {
+    .header-container {
+        padding: 10px;
+    }
+
+    .logo-left img, .logo-right img {
+        height: 90px;
+    }
+
+    .college-name {
+        font-size: 24px;
+    }
+
+    .college-subname {
+        font-size: 18px;
+    }
+
+    .college-address, .college-approvals, .college-accreditation {
+        font-size: 12px;
+        margin-bottom: 2px;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+    .header-container {
+        padding: 8px;
+    }
+
+    .logo-left img, .logo-right img {
+        height: 60px;
+    }
+
+    .college-name {
+        font-size: 18px;
+        margin-bottom: 3px;
+    }
+
+    .college-subname {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .college-address, .college-approvals, .college-accreditation {
+        font-size: 10px;
+        margin-bottom: 1px;
+    }
 }
 
 /* Symposium section styles */
@@ -643,6 +685,82 @@ footer::before {
     z-index: 1;
 }
 
+.copyright p {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+/* All Logos Container Styles */
+.all-logos-container {
+    background-color: var(--dark-bg);
+    padding: 30px 0;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 -5px 15px var(--shadow-color), 0 5px 15px var(--shadow-color);
+}
+
+.all-logos-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-primary);
+    opacity: 0.05;
+    z-index: 0;
+}
+
+.all-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.all-logos img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+    animation: logoFadeIn 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+.all-logos img:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .all-logos {
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    .all-logos img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .all-logos {
+        gap: 10px;
+        padding: 10px;
+    }
+    
+    .all-logos img {
+        width: 60px;
+        height: 60px;
+    }
+}
+
 /* Countdown styles */
 .countdown {
     margin-top: 50px;
@@ -727,7 +845,7 @@ footer::before {
 
 /* Medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) {
-    .container, .header-container, .footer-container {
+    .container, .header-container, .footer-container, .all-logos {
         max-width: 720px;
     }
     
@@ -741,6 +859,11 @@ footer::before {
     
     .right-logo {
         max-width: 110px;
+    }
+    
+    .all-logos img {
+        width: 80px;
+        height: 80px;
     }
     
     .chapters-grid {
@@ -760,7 +883,7 @@ footer::before {
 
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) {
-    .container, .header-container, .footer-container {
+    .container, .header-container, .footer-container, .all-logos {
         max-width: 540px;
     }
     
@@ -780,6 +903,15 @@ footer::before {
     
     .right-logo {
         max-width: 100px;
+    }
+    
+    .all-logos {
+        gap: 20px;
+    }
+    
+    .all-logos img {
+        width: 70px;
+        height: 70px;
     }
     
     .college-name {
