@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Create a countdown to the event (using Chapter 1 date: May 3, 2025)
-    const eventDate = new Date('May 3, 2025 00:00:00').getTime();
+    const eventDate = new Date('May 10  , 2025 00:00:00').getTime();
     
     // Add countdown element to the page if it exists
     const countdownElement = document.createElement('div');
@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (symposiumSection) {
         symposiumSection.appendChild(countdownElement);
     }
-    
+   
     // Update countdown every second
     const countdownInterval = setInterval(function() {
         const now = new Date().getTime();
